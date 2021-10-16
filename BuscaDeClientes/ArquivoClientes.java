@@ -33,7 +33,7 @@ public class ArquivoClientes {
 
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
-            return clientes;
+            return null;
         }
     }
 }
