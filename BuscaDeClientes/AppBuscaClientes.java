@@ -36,5 +36,7 @@ public class AppBuscaClientes {
                 System.out.println(resultado[1]);
             }
         } while(i==0);    
+
+        scanner.close();
     }
 }
