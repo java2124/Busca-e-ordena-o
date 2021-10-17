@@ -68,10 +68,9 @@ public class buscaCliente {
                 retorno[8] = clientes.get(meio).getIdade();
                 return retorno;
             }
-            int comp = chave2.compareTo(nome);
 
             totalComparacoes++;
-            if (comp < 0) { 
+            if (chave2.compareTo(nome) < 0) { 
                 fim = meio - 1;
             } else {
                 inicio = meio + 1;
