@@ -22,7 +22,7 @@ public class ArquivoClientes {
                 // quebrando a linha por ","
                 partes = linha.split(",");
                 
-                Cliente novo = new Cliente(partes[0], partes[1], partes[2], partes[3], partes[4], partes[5]);
+                Cliente novo = new Cliente(partes[0], partes[1], partes[2], partes[3], partes[4], partes[5], partes[6]);
 
                 clientes.add(novo);
             }

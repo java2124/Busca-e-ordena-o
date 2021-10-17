@@ -19,12 +19,13 @@ public class AppBuscaClientes {
         buscaCliente cliente = new buscaCliente();
 
         clientes = dados.dadosClientes();
+        clientes = cliente.bubbleSortOtimizado(clientes);
 
         System.out.println("Olá! Seja Bem-Vindo(a) ao sistema de clientes da empresa Anhembi Morumbi!");
 
         do{
             System.out.println();    
-            System.out.println("Digite o nome do cliente que deseja procurar (Se quiser sair do sistema é digitar 'exit')");
+            System.out.println("Digite o nome do cliente que deseja procurar (Se quiser sair do sistema basta digitar 'exit')");
             nomeCliente = scanner.nextLine();
 
             if(nomeCliente.equals("exit")){
@@ -32,10 +33,24 @@ public class AppBuscaClientes {
             } else {
                 String [] resultado = cliente.pesquisarCliente(clientes, nomeCliente);
     
-                System.out.println(resultado[0]);
-                System.out.println(resultado[1]);
+                if(resultado[2] != null){
+                    System.out.println(); 
+                    System.out.println("Nome: " + resultado[2]);
+                    System.out.println("Sexo: " + resultado[3]);
+                    System.out.println("Endereço: " + resultado[4]);
+                    System.out.println("Estado: " + resultado[5]);
+                    System.out.println("Email: " + resultado[6]);
+                    System.out.println("Telefone: " + resultado[7]);
+                    System.out.println("Idade: " + resultado[8]);
+                    System.out.println();
+                    System.out.println(resultado[1]);
+                } else {
+                    System.out.println(); 
+                    System.out.println(resultado[0]);
+                    System.out.println(resultado[1]);
+                }
             }
-        } while(i==0);    
+        } while(i==0);   
 
         scanner.close();
     }

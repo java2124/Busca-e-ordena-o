@@ -7,14 +7,16 @@ public class Cliente {
     private String estado;
     private String email;
     private String telefone;
+    private String idade;
 
-    public Cliente (String nome,String sexo,String endereco,String estado,String email,String telefone){
+    public Cliente (String nome,String sexo,String endereco,String estado,String email,String telefone, String idade){
         this.nome = nome;
         this.sexo = sexo;
         this.endereco = endereco;
         this.estado = estado;
         this.email = email;
         this.telefone = telefone;
+        this.idade = idade;
     }
 
     public String getNome() {
@@ -65,5 +67,12 @@ public class Cliente {
         this.telefone = telefone;
     }
 
+    public String getIdade() {
+        return idade;
+    }
+
+    public void setIdade(String idade) {
+        this.idade = idade;
+    }
 
 }
