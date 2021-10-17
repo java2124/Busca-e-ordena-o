@@ -19,7 +19,7 @@ public class AppBuscaClientes {
         buscaCliente cliente = new buscaCliente();
 
         clientes = dados.dadosClientes();
-        clientes = cliente.bubbleSortOtimizado(clientes);
+        clientes = cliente.ordenacaoLista(clientes);
 
         System.out.println("Olá! Seja Bem-Vindo(a) ao sistema de clientes da empresa Anhembi Morumbi!");
 
@@ -31,7 +31,7 @@ public class AppBuscaClientes {
             if(nomeCliente.equals("exit")){
                 i = 1;
             } else {
-                String [] resultado = cliente.pesquisarCliente(clientes, nomeCliente);
+                String [] resultado = cliente.pesquisarCliente(clientes, "Fábio Lima");
     
                 if(resultado[2] != null){
                     System.out.println(); 

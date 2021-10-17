@@ -6,7 +6,7 @@ import java.text.Normalizer;
 public class buscaCliente {
     public int totalComparacoes = 0;
 
-    public ArrayList<Cliente> bubbleSortOtimizado(ArrayList <Cliente> clientes) {
+    public ArrayList<Cliente> ordenacaoLista(ArrayList <Cliente> clientes) {
         int iteracao, i;
         boolean trocou = true;
 
@@ -53,9 +53,9 @@ public class buscaCliente {
 
         while (inicio <= fim) {
             meio = (inicio + fim) / 2;
-            totalComparacoes++;
             String chave2 = Normalizer.normalize(chave, Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "");
             String nome = Normalizer.normalize(clientes.get(meio).getNome(), Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "");
+            totalComparacoes++;
             if (chave2.equals(nome)) { 
                 retorno[0] = "Cliente encontrado!";
                 retorno[1] = "Total de Comparações: " + totalComparacoes;
@@ -68,10 +68,9 @@ public class buscaCliente {
                 retorno[8] = clientes.get(meio).getIdade();
                 return retorno;
             }
-            totalComparacoes++;
-
             int comp = chave2.compareTo(nome);
 
+            totalComparacoes++;
             if (comp < 0) { 
                 fim = meio - 1;
             } else {
