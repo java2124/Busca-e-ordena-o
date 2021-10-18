@@ -4,16 +4,16 @@ public class Cliente {
     private String nome;
     private String sexo;
     private String endereco;
-    private String estado;
+    private String cidade;
     private String email;
     private String telefone;
     private String idade;
 
-    public Cliente (String nome,String sexo,String endereco,String estado,String email,String telefone, String idade){
+    public Cliente (String nome,String sexo,String endereco,String cidade,String email,String telefone, String idade){
         this.nome = nome;
         this.sexo = sexo;
         this.endereco = endereco;
-        this.estado = estado;
+        this.cidade = cidade;
         this.email = email;
         this.telefone = telefone;
         this.idade = idade;
@@ -51,12 +51,12 @@ public class Cliente {
         this.endereco = endereco;
     }
 
-    public String getEstado() {
-        return estado;
+    public String getCidade() {
+        return cidade;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
     }
 
     public String getTelefone() {

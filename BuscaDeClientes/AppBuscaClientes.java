@@ -31,7 +31,7 @@ public class AppBuscaClientes {
                 String [] resultado = cliente.pesquisarCliente(clientes, nomeCliente);
     
                 if(resultado[2] != null){
-                    JOptionPane.showMessageDialog(null, "Nome: " + resultado[2] + "\n" + "Sexo: " + resultado[3] + "\n" + "Endereço: " + resultado[4] + "\n" + "Estado: " + resultado[5] + "\n" + "Email: " + resultado[6] + "\n" + "Telefone: " + resultado[7] + "\n" + "Idade: " + resultado[8] + "\n" + "\n" + resultado[1]);
+                    JOptionPane.showMessageDialog(null, "Nome: " + resultado[2] + "\n" + "Sexo: " + resultado[3] + "\n" + "Endereço: " + resultado[4] + "\n" + "Cidade: " + resultado[5] + "\n" + "Email: " + resultado[6] + "\n" + "Telefone: " + resultado[7] + "\n" + "Idade: " + resultado[8] + "\n" + "\n" + resultado[1]);
                 } else {
                     JOptionPane.showMessageDialog(null, resultado[0] + "\n" + "\n" + resultado[1]);
                 }

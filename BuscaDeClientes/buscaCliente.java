@@ -18,12 +18,12 @@ public class buscaCliente {
                 int comp = chave.compareTo(nome);
 
                 if (comp > 0) {
-                    Cliente aux = new Cliente(clientes.get(i).getNome(), clientes.get(i).getSexo(), clientes.get(i).getEndereco(), clientes.get(i).getEstado(), clientes.get(i).getEmail(), clientes.get(i).getTelefone(), clientes.get(i).getIdade());
+                    Cliente aux = new Cliente(clientes.get(i).getNome(), clientes.get(i).getSexo(), clientes.get(i).getEndereco(), clientes.get(i).getCidade(), clientes.get(i).getEmail(), clientes.get(i).getTelefone(), clientes.get(i).getIdade());
                     
                     clientes.get(i).setNome(clientes.get(i + 1).getNome());
                     clientes.get(i).setSexo(clientes.get(i + 1).getSexo());
                     clientes.get(i).setEndereco(clientes.get(i + 1).getEndereco());
-                    clientes.get(i).setEstado(clientes.get(i + 1).getEstado());
+                    clientes.get(i).setCidade(clientes.get(i + 1).getCidade());
                     clientes.get(i).setEmail(clientes.get(i + 1).getEmail());
                     clientes.get(i).setTelefone(clientes.get(i + 1).getTelefone());
                     clientes.get(i).setIdade(clientes.get(i + 1).getIdade());
@@ -31,7 +31,7 @@ public class buscaCliente {
                     clientes.get(i + 1).setNome(aux.getNome());
                     clientes.get(i + 1).setSexo(aux.getSexo());
                     clientes.get(i + 1).setEndereco(aux.getEndereco());
-                    clientes.get(i + 1).setEstado(aux.getEstado());
+                    clientes.get(i + 1).setCidade(aux.getCidade());
                     clientes.get(i + 1).setEmail(aux.getEmail());
                     clientes.get(i + 1).setTelefone(aux.getTelefone());
                     clientes.get(i + 1).setIdade(aux.getIdade());
@@ -62,7 +62,7 @@ public class buscaCliente {
                 retorno[2] = clientes.get(meio).getNome();
                 retorno[3] = clientes.get(meio).getSexo();
                 retorno[4] = clientes.get(meio).getEndereco();
-                retorno[5] = clientes.get(meio).getEstado();
+                retorno[5] = clientes.get(meio).getCidade();
                 retorno[6] = clientes.get(meio).getEmail();
                 retorno[7] = clientes.get(meio).getTelefone();
                 retorno[8] = clientes.get(meio).getIdade();
